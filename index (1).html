@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDC Truck & Trailer Repair | Indianapolis, IN</title>
+<meta name="description" content="KDC Truck & Trailer Repair — serving Indianapolis since 1995. Semi truck, commercial truck, bus and trailer repair, wreck repair, paint booths, sandblasting, DOT inspections, fleet accounts. Call (317) 227-0533.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2b3c;
+    --navy-light: #243447;
+    --orange: #e86c2f;
+    --orange-dark: #c45a20;
+    --orange-light: #fdf0e8;
+    --cream: #faf7f2;
+    --warm-gray: #6b6560;
+    --light-gray: #f0ece6;
+    --border: #ddd8d0;
+    --white: #ffffff;
+    --text: #2c2420;
+    --text-light: #6b6560;
+    --green: #2d7a4f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Bitter', serif;
+    line-height: 1.2;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-badge {
+    width: 42px;
+    height: 42px;
+    background: var(--orange);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    color: white;
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    color: rgba(255,255,255,0.55);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links span {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+
+  .nav-links span:hover { color: white; }
+
+  .nav-cta {
+    background: var(--orange);
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--orange-dark) !important; color: white !important; }
+
+  .nav-phone {
+    color: var(--orange) !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    cursor: default !important;
+  }
+
+  /* PAGE SECTIONS */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 2rem 4.5rem;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 80px
+    );
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,108,47,0.15);
+    border: 1px solid rgba(232,108,47,0.3);
+    color: #f4a86a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+
+  .hero h1 span { color: var(--orange); }
+
+  .hero-desc {
+    color: rgba(255,255,255,0.72);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover { background: rgba(255,255,255,0.17); }
+
+  .hero-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  }
+
+  .hero-card-title {
+    font-family: 'Bitter', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--orange-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+
+  .contact-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; }
+  .contact-value { font-weight: 600; color: var(--navy); font-size: 15px; }
+
+  .hero-card .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+  }
+
+  .trust-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .trust-icon { font-size: 18px; }
+
+  /* SECTIONS */
+  .section {
+    padding: 4.5rem 2rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .section-desc {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    max-width: 580px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  /* SERVICES GRID */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--orange-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* FLEET SECTION */
+  .fleet-section {
+    background: var(--navy);
+    color: white;
+  }
+
+  .fleet-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .fleet-section .section-tag { color: #f4a86a; }
+  .fleet-section .section-title { color: white; }
+  .fleet-section .section-desc { color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
+
+  .fleet-packages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fleet-pkg {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .fleet-pkg-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .fleet-pkg h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .pkg-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  .pkg-badge.starter { background: rgba(232,108,47,0.2); color: #f4a86a; }
+  .pkg-badge.popular { background: var(--orange); color: white; }
+  .pkg-badge.enterprise { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
+
+  .fleet-pkg p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  .fleet-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .fleet-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    background: rgba(45,122,79,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5ecb8a;
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-box {
+    background: var(--orange-light);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Bitter', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--orange-dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--warm-gray);
+    font-weight: 500;
+  }
+
+  .values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .values-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .val-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--orange-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .val-text h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .val-text p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* CONTACT */
+  .contact-section { background: var(--cream); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .info-card-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--orange-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .info-card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+
+  .info-card-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .info-card-sub {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  /* FORM */
+  .contact-form {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-family: 'Bitter', serif;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 5px;
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(232,108,47,0.12);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+  }
+
+  .form-submit:hover { background: var(--orange-dark); }
+
+  /* REVIEWS */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .stars { color: #f59e0b; font-size: 15px; margin-bottom: 0.75rem; letter-spacing: 1px; }
+
+  .review-text {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .reviewer {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .reviewer-type {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  /* MAP EMBED */
+  .map-frame {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-top: 1.25rem;
+  }
+
+  .map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    padding: 2.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Bitter', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links span { color: rgba(255,255,255,0.55); transition: color 0.2s; cursor: pointer; }
+  .footer-links span:hover { color: white; }
+
+  .footer-copy { font-size: 12px; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .hero h1 { font-size: 2.1rem; }
+    .fleet-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .trust-bar-inner { gap: 1.5rem; }
+  }
+
+  /* SUCCESS MESSAGE */
+  .success-msg {
+    display: none;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    color: #065f46;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .success-msg.show { display: block; }
+
+  /* SECTION BG ALT */
+  .bg-cream { background: var(--cream); }
+  .bg-light { background: var(--light-gray); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">KDC</div>
+      <div>
+        <div class="logo-text">KDC Truck & Trailer Repair</div>
+        <div class="logo-sub">Indianapolis, Indiana</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><span onclick="show('home')">Home</span></li>
+      <li><span onclick="show('services')">Services</span></li>
+      <li><span onclick="show('fleet')">Fleet Accounts</span></li>
+      <li><span onclick="show('about')">About Us</span></li>
+      <li><span class="nav-phone">📞 (317) 227-0533</span></li>
+      <li><span onclick="show('contact')" class="nav-cta">Request Service</span></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Indianapolis's Independent Fleet Shop · Est. 1995</div>
+        <h1>Indy's Most Complete<br><span>Truck & Trailer<br>Repair Shop.</span></h1>
+        <p class="hero-desc">30 years serving Indianapolis fleets and owner-operators. Full wreck repairs, two 60' paint booths, sandblasting, mobile service, and DOT inspections — all under one roof. Independent, local, and built around your schedule.</p>
+        <div class="hero-actions">
+          <span onclick="show('contact')" class="btn-primary">📋 Request Service</span>
+          <span class="btn-secondary">📞 (317) 227-0533</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Get in Touch</div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">(317) 227-0533</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">2702 N. Colorado Ave.</div>
+            <div style="font-size:13px;color:var(--text-light);">Indianapolis, IN</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-value">Mon–Fri: 7am – 5pm</div>
+            <div style="font-size:13px;color:var(--text-light);">Sat: By Appointment · Sun: Closed</div>
+          </div>
+        </div>
+        <span onclick="show('contact')" class="btn-primary">Request Service →</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span class="trust-icon">🏆</span> In Business Since 1995</div>
+      <div class="trust-item"><span class="trust-icon">🎨</span> Two 60' Paint Booths</div>
+      <div class="trust-item"><span class="trust-icon">🚛</span> 3 Mobile Service Trucks</div>
+      <div class="trust-item"><span class="trust-icon">✅</span> DOT Certified Inspections</div>
+      <div class="trust-item"><span class="trust-icon">💥</span> Full Wreck Repairs</div>
+      <div class="trust-item"><span class="trust-icon">🤝</span> Fleet Accounts · Net-30 Billing</div>
+    </div>
+  </div>
+
+  <!-- WHY KDC SECTION -->
+  <div class="section">
+    <div class="section-inner">
+      <div class="section-tag">Why KDC</div>
+      <h2 class="section-title">One Shop. Every Capability You Need.</h2>
+      <p class="section-desc">30 years in Indianapolis, capabilities most shops don't have, and a team that actually knows your name. Here's what makes KDC different.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
+
+        <div style="background:var(--navy);border-radius:12px;padding:1.5rem;color:white;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">🎨</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:0.5rem;">Rare Capability</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:0.5rem;">Two 60' Cross Draft Paint Booths</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;">Full truck and trailer repaints, wreck restoration, and professional fleet graphics. No independent shop in Indianapolis matches this capacity.</div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:12px;padding:1.5rem;color:white;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">💥</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:0.5rem;">Full Restoration</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:0.5rem;">Complete Wreck Repairs</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;">Frame straightening, structural repair, and full collision restoration for trucks and trailers. We handle jobs that most shops turn away.</div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:12px;padding:1.5rem;color:white;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">🚛</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin-bottom:0.5rem;">We Come to You</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:0.5rem;">3 Equipped Mobile Service Trucks</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;">On-site repair and maintenance at your yard, terminal, or roadside — for both trucks and trailers. Fleet customers get scheduled mobile visits.</div>
+        </div>
+
+        <div style="background:var(--orange-light);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">📅</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange-dark);margin-bottom:0.5rem;">Since 1995</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;">30 Years. Same Location. Same Standard.</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.6;">A local Indianapolis business earning repeat customers since 1995. We built our reputation one repair at a time — and we're not going anywhere.</div>
+        </div>
+
+        <div style="background:var(--orange-light);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">💨</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange-dark);margin-bottom:0.5rem;">Surface Prep</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;">On-Site Sandblasting</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.6;">Industrial sandblasting for frames, trailer components, and body panels. Proper prep work that most independent shops outsource — we do it in-house.</div>
+        </div>
+
+        <div style="background:var(--orange-light);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:-10px;font-size:5rem;opacity:0.06;line-height:1;">💻</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange-dark);margin-bottom:0.5rem;">Dealer-Grade Diagnostics</div>
+          <div style="font-family:'Bitter',serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;">J-Pro Computer System On-Hand</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.6;">Professional diagnostic capability without dealer prices or dealer wait times. Accurate fault identification means faster, cheaper repairs.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMUNICATION PROMISE BANNER -->
+  <div style="background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2rem;">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;text-align:center;">
+        <div>
+          <div style="font-size:2rem;margin-bottom:0.5rem;">📲</div>
+          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Check-In Text</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">We text you the moment your truck is checked in — no wondering if we got it.</div>
+        </div>
+        <div style="border-left:1px solid var(--border);border-right:1px solid var(--border);padding:0 1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">🔍</div>
+          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Diagnosis Update</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">You get the full picture before we touch anything — issue, cost, timeline. Approve by reply.</div>
+        </div>
+        <div>
+          <div style="font-size:2rem;margin-bottom:0.5rem;">✅</div>
+          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Ready for Pickup</div>
+          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">A text when it's done — so your driver isn't calling to check in every hour.</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;font-size:13px;color:var(--text-light);">We keep you updated at every step. No news is not good news — we believe in communication.</div>
+    </div>
+  </div>
+
+  <!-- SERVICES PREVIEW -->
+  <div class="section">
+    <div class="section-inner">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Full-Service Truck & Trailer Repair</h2>
+      <p class="section-desc">From preventive maintenance to major repairs, we handle it all under one roof. No job too big, no issue too small.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Preventive Maintenance & DOT</h3>
+          <p>Scheduled PM services, oil changes, and certified DOT inspections. Fleet service options available to keep your trucks compliant and your downtime minimal.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💥</div>
+          <h3>Full Wreck Repairs</h3>
+          <p>Complete collision and wreck repair for trucks and trailers. Frame work, structural repair, and full restoration — we get your equipment back on the road.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Paint & Body</h3>
+          <p>Two 60' cross draft paint booths for professional-grade truck and trailer painting. Body work, dent repair, panel replacement, and sandblasting also available.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Mobile Service Trucks</h3>
+          <p>Three fully equipped service trucks that come to you — serving both trucks and trailers on-site. Perfect for fleet customers and roadside needs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛑</div>
+          <h3>Brakes & Suspension</h3>
+          <p>Complete brake system service including air brakes, drum and disc replacements, slack adjusters, and full suspension diagnostics and repair.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚜</div>
+          <h3>Trailer Repair</h3>
+          <p>All trailer types serviced — dry van, flatbed, refrigerated, and more. Structural repairs, lighting, doors, floors, landing gear, and undercarriage work.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <span onclick="show('services')" class="btn-primary" style="display:inline-flex;">See All Services →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="section bg-cream">
+    <div class="section-inner">
+      <div class="section-tag">What Our Customers Say</div>
+      <h2 class="section-title">Trusted by Drivers & Fleets Across Indy</h2>
+      <p class="section-desc">We've built our reputation one repair at a time. Here's what our customers have to say.</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"KDC got my truck back on the road same day. They were upfront about the cost and didn't try to upsell me on anything I didn't need. That kind of honesty is rare."</p>
+          <div class="reviewer">Marcus T.</div>
+          <div class="reviewer-type">Owner-Operator, Indianapolis</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"We run a fleet of 12 trucks and KDC handles all our maintenance. They're reliable, fast, and always communicate clearly. Couldn't ask for a better shop."</p>
+          <div class="reviewer">Fleet Manager, Regional Carrier</div>
+          <div class="reviewer-type">Indianapolis, IN</div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Had a DOT inspection done here — quick, thorough, and priced fairly. They found a small brake issue and fixed it on the spot. These guys know their stuff."</p>
+          <div class="reviewer">Dave R.</div>
+          <div class="reviewer-type">Independent Trucker</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLEET CTA BANNER -->
+  <div class="section" style="background:var(--navy);padding:3rem 2rem;">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+        <div>
+          <div class="section-tag" style="color:#f4a86a;">For Fleet Managers</div>
+          <h2 class="section-title" style="color:white;margin-bottom:1rem;">Managing a Fleet? We Make It Simple.</h2>
+          <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:1.5rem;">At KDC, your fleet manager talks directly to the shop — a real person who knows your account. We offer net-30 billing, priority scheduling, on-site service at your yard, and text updates on every job. Simple, reliable, and built around keeping your trucks moving.</p>
+          <span onclick="show('fleet')" class="btn-primary" style="display:inline-flex;">See Fleet Account Options →</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Net-30 billing — one invoice, not a hundred</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Priority scheduling — your trucks don't wait in line</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Mobile service trucks come to your yard</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Text updates at every stage — check-in, diagnosis, ready</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">On-site estimates — no tow required just for a quote</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SERVICES PAGE -->
+<div id="page-services" class="page">
+  <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
+    <div class="section-inner">
+      <div class="section-tag" style="color:#f4a86a;">What We Offer</div>
+      <h1 style="color:white;font-size:2.4rem;font-weight:700;">Our Services</h1>
+      <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:520px;">Full-service repair and maintenance for semi trucks, commercial vehicles, buses, and trailers — all under one roof in Indianapolis.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-inner">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Preventive Maintenance & Oil Changes</h3>
+          <p>Scheduled PM services keep your trucks compliant and your downtime minimal. Oil changes, fluid top-offs, filter replacements, belts, hoses, and full chassis lube. Fleet service options available — we'll build a PM schedule around your operation.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>DOT Inspections</h3>
+          <p>Annual DOT inspections performed by certified technicians. Thorough Level 1 inspections with detailed reports. Pre-trip inspection support also available. Fleet inspection packages offered. Get back on the road compliant and confident.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💥</div>
+          <h3>Full Wreck Repairs</h3>
+          <p>Complete collision and accident repair for semi trucks, commercial vehicles, and trailers. Frame straightening, structural repair, cab restoration, and full rebuild — we handle it from start to finish and get your equipment back earning.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Paint — Two 60' Cross Draft Paint Booths</h3>
+          <p>Professional-grade painting in our two 60-foot cross draft paint booths — large enough for full semi trucks and trailers. Complete body prep, primer, color matching, and topcoat finish. Fleet repaints and single units welcome.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💨</div>
+          <h3>Sandblasting</h3>
+          <p>Industrial sandblasting for trucks, trailers, frames, and components. Removes rust, old paint, and corrosion down to bare metal — ideal prep for painting, welding, or protective coatings.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Mobile Service — 3 Equipped Service Trucks</h3>
+          <p>Can't bring your truck in? We come to you. Three fully equipped service trucks dispatched for on-site repairs and maintenance for both trucks and trailers. Ideal for fleet accounts, breakdowns, and yard service.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📝</div>
+          <h3>On-Site Estimates</h3>
+          <p>We provide estimates right at your location — no need to bring the vehicle in just to find out what it'll cost. Straightforward, written estimates with no surprises.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>J-Pro Computer Diagnostic System</h3>
+          <p>Our J-Pro computer system provides advanced diagnostics for commercial trucks and equipment. Accurate fault identification means faster, more precise repairs — less guesswork, less downtime.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛑</div>
+          <h3>Brakes & Suspension</h3>
+          <p>Complete brake system service including air brakes, hydraulic brakes, drum and disc replacements, slack adjusters, and brake chambers. Full suspension diagnostics, leaf springs, shocks, and alignment checks.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚜</div>
+          <h3>Trailer Repair</h3>
+          <p>All trailer types — dry van, flatbed, refrigerated, tanker, and lowboy. Structural repairs, flooring, lighting systems, rear doors, landing gear, kingpin service, and undercarriage work.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚫</div>
+          <h3>Tires</h3>
+          <p>Commercial tire sales, mounting, balancing, and rotation. Wide selection of steer, drive, and trailer tires from top brands. Flat repair and mobile tire service available.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3>Electrical & Lighting</h3>
+          <p>Diagnosis and repair of truck and trailer electrical systems. Running lights, brake lights, ABS systems, wiring harnesses, and battery service. DOT lighting compliance handled.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-cream" style="padding-top:3rem;padding-bottom:3rem;">
+    <div class="section-inner" style="text-align:center;">
+      <h2 class="section-title">Ready to Schedule a Repair?</h2>
+      <p class="section-desc" style="margin:0.75rem auto 1.75rem;">Call us or fill out the service request form and we'll get back to you quickly.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <span class="btn-primary">📞 (317) 227-0533</span>
+        <span onclick="show('contact')" class="btn-secondary" style="background:var(--navy);border-color:var(--navy);color:white;">Request Service Online →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLEET PAGE -->
+<div id="page-fleet" class="page">
+  <div class="fleet-section section" style="padding-bottom:4.5rem;">
+    <div class="fleet-inner section-inner">
+      <div>
+        <div class="section-tag">For Fleet Managers</div>
+        <h1 class="section-title" style="color:white;font-size:2.4rem;">Fleet Accounts &<br>Maintenance Contracts</h1>
+        <p class="section-desc">KDC has 30 years of Indianapolis relationships, three mobile service trucks, and a service manager who answers the phone. Fleet accounts include simplified billing, priority scheduling, and on-site service — so you can focus on running your operation, not managing repairs.</p>
+        <ul class="fleet-benefits">
+          <li><div class="check">✓</div> Net-30 billing — one monthly statement, not per-job invoices</li>
+          <li><div class="check">✓</div> Priority scheduling — your trucks don't sit in line behind walk-ins</li>
+          <li><div class="check">✓</div> Mobile service trucks dispatched to your yard or terminal</li>
+          <li><div class="check">✓</div> Text updates at check-in, diagnosis, and pickup — every job</li>
+          <li><div class="check">✓</div> On-site estimates — no tow required just to get a quote</li>
+          <li><div class="check">✓</div> Full wreck repair & two 60' paint booths — we don't outsource</li>
+          <li><div class="check">✓</div> DOT inspection packages for your entire fleet</li>
+          <li><div class="check">✓</div> One shop, every make and model — semis, buses, trailers</li>
+        </ul>
+        <span onclick="show('contact')" class="btn-primary">Get a Fleet Quote →</span>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Maintenance Package Tiers</div>
+        <div class="fleet-packages">
+          <div class="fleet-pkg">
+            <div class="fleet-pkg-header">
+              <h4>Starter Fleet</h4>
+              <span class="pkg-badge starter">2–5 Trucks</span>
+            </div>
+            <p>Scheduled PM services, oil changes, and DOT inspection discounts. Great for small owner-operators growing their fleet.</p>
+          </div>
+          <div class="fleet-pkg" style="border-color:rgba(232,108,47,0.4);">
+            <div class="fleet-pkg-header">
+              <h4>Standard Fleet</h4>
+              <span class="pkg-badge popular">Most Popular · 6–20 Trucks</span>
+            </div>
+            <p>Everything in Starter plus priority scheduling, net-30 billing, monthly reports, and on-site service options.</p>
+          </div>
+          <div class="fleet-pkg">
+            <div class="fleet-pkg-header">
+              <h4>Enterprise Fleet</h4>
+              <span class="pkg-badge enterprise">20+ Trucks</span>
+            </div>
+            <p>Fully customized service agreement. Dedicated account manager, flexible on-site scheduling, and full-service coverage.</p>
+          </div>
+        </div>
+        <div style="margin-top:1.25rem;padding:1rem 1.25rem;background:rgba(255,255,255,0.06);border-radius:8px;border:1px solid rgba(255,255,255,0.1);">
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.6;">📞 Pricing is customized to your fleet size and service needs. Call us or submit a request and we'll put together a quote.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-inner" style="text-align:center;max-width:680px;">
+      <div class="section-tag">Who We Serve</div>
+      <h2 class="section-title">Built for Indianapolis-Area Businesses</h2>
+      <p class="section-desc" style="margin:0.75rem auto 2rem;">We work with regional carriers, construction companies, municipalities, bus companies, and logistics firms throughout Indianapolis and central Indiana.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;text-align:left;max-width:720px;margin:0 auto 2.5rem;">
+        <div class="service-card"><div class="service-icon">🚛</div><h3 style="font-size:15px;">Regional Carriers</h3></div>
+        <div class="service-card"><div class="service-icon">🚌</div><h3 style="font-size:15px;">Bus Companies</h3></div>
+        <div class="service-card"><div class="service-icon">🏗️</div><h3 style="font-size:15px;">Construction Firms</h3></div>
+        <div class="service-card"><div class="service-icon">🏛️</div><h3 style="font-size:15px;">Municipalities</h3></div>
+        <div class="service-card"><div class="service-icon">📦</div><h3 style="font-size:15px;">Logistics & 3PL</h3></div>
+        <div class="service-card"><div class="service-icon">🚜</div><h3 style="font-size:15px;">Owner-Operators</h3></div>
+      </div>
+      <span onclick="show('contact')" class="btn-primary" style="display:inline-flex;">Set Up a Fleet Account →</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" class="page">
+  <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
+    <div class="section-inner">
+      <div class="section-tag" style="color:#f4a86a;">Our Story</div>
+      <h1 style="color:white;font-size:2.4rem;font-weight:700;">About KDC Truck & Trailer Repair</h1>
+      <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:580px;">A local Indianapolis shop built on honest work, fair prices, and a genuine care for our customers' livelihoods.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div>
+          <div class="about-stats">
+            <div class="stat-box"><div class="stat-num">1995</div><div class="stat-label">Year Founded</div></div>
+            <div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Years in Indianapolis</div></div>
+            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">60' Paint Booths</div></div>
+            <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Mobile Service Trucks</div></div>
+          </div>
+          <p style="color:var(--text-light);line-height:1.8;font-size:15px;margin-bottom:1rem;">KDC Truck & Trailer Repair has been serving Indianapolis since 1995 — built on a simple idea: commercial drivers and fleet operators deserve a shop they can actually trust. One that gives them straight answers, fair prices, and repairs done right the first time.</p>
+          <p style="color:var(--text-light);line-height:1.8;font-size:15px;margin-bottom:1rem;">We're a local, independent Indianapolis shop. Over 30 years we've grown our capabilities to include full wreck repairs, two 60' cross draft paint booths, sandblasting, and three fully equipped mobile service trucks. Most shops in Indianapolis have to send that work out. We do it all in-house.</p>
+          <p style="color:var(--text-light);line-height:1.8;font-size:15px;">When your truck is down, your income is down — and we take that seriously. Every job gets a check-in text, a diagnosis update before we start, and a ready notification when it's done. No surprises, no chasing us for updates.</p>
+        </div>
+        <div>
+          <ul class="values-list">
+            <li>
+              <div class="val-icon">🤝</div>
+              <div class="val-text">
+                <h4>Honest Estimates — Always</h4>
+                <p>We tell you what's wrong and what it'll cost before we start. No surprise bills, no unnecessary upsells, no dealer markup.</p>
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">📲</div>
+              <div class="val-text">
+                <h4>3-Text Communication Promise</h4>
+                <p>Every job gets a check-in text, a diagnosis update with your approval before we proceed, and a ready-for-pickup notification. You'll never have to call and wonder.</p>
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">🎨</div>
+              <div class="val-text">
+                <h4>Full In-House Capabilities</h4>
+                <p>Two 60' cross draft paint booths, in-house sandblasting, full wreck restoration, and J-Pro diagnostics. We handle jobs most independents turn away.</p>
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">🚛</div>
+              <div class="val-text">
+                <h4>We Come to You</h4>
+                <p>Three fully equipped mobile service trucks for on-site repairs and maintenance at your yard, terminal, or roadside. Fleet customers get scheduled mobile visits.</p>
+              </div>
+            </li>
+            <li>
+              <div class="val-icon">🌆</div>
+              <div class="val-text">
+                <h4>Local & Independent Since 1995</h4>
+                <p>We're a locally owned Indianapolis business that's been here since 1995. When you call, you reach the shop — and we treat every customer like a neighbor.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-cream" style="padding-top:3rem;padding-bottom:3rem;">
+    <div class="section-inner" style="text-align:center;">
+      <h2 class="section-title">Come See Us</h2>
+      <p class="section-desc" style="margin:0.75rem auto 1.75rem;">We're located at 2702 N. Colorado Ave. in Indianapolis. Give us a call or stop by — we're happy to take a look.</p>
+      <span class="btn-primary" style="display:inline-flex;">📞 Call (317) 227-0533</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
+    <div class="section-inner">
+      <div class="section-tag" style="color:#f4a86a;">Get in Touch</div>
+      <h1 style="color:white;font-size:2.4rem;font-weight:700;">Request Service</h1>
+      <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:520px;">Fill out the form below and we'll get back to you promptly. Prefer to call? Reach us directly at (317) 227-0533.</p>
+    </div>
+  </div>
+
+  <div class="section contact-section">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-block">
+            <div class="info-card">
+              <div class="info-card-icon">📞</div>
+              <div>
+                <div class="info-card-label">Phone</div>
+                <div class="info-card-value"><span style="color:var(--orange);">(317) 227-0533</span></div>
+                <div class="info-card-sub">Call or text anytime during business hours</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">✉️</div>
+              <div>
+                <div class="info-card-label">Email</div>
+                <div class="info-card-value" style="font-size:14px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f444b4c404949464c4a6f444b4c5d4a5f4e465d014c4042">[email&#160;protected]</a></div>
+                <div class="info-card-sub">We respond to all emails during business hours</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">📍</div>
+              <div>
+                <div class="info-card-label">Location</div>
+                <div class="info-card-value">2702 N. Colorado Ave.</div>
+                <div class="info-card-sub">Indianapolis, IN 46218</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">🕐</div>
+              <div>
+                <div class="info-card-label">Business Hours</div>
+                <div class="info-card-value">Mon–Fri: 7:00am – 5:00pm</div>
+                <div class="info-card-sub">Saturday: By Appointment Only · Sunday: Closed</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">🚛</div>
+              <div>
+                <div class="info-card-label">Fleet Inquiries</div>
+                <div class="info-card-value">Fleet Accounts Available</div>
+                <div class="info-card-sub">Net-30 billing · On-site service · Priority scheduling</div>
+              </div>
+            </div>
+          </div>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063!2d-86.1349!3d39.7984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2702+N+Colorado+Ave%2C+Indianapolis%2C+IN+46218!5e0!3m2!1sen!2sus!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <div class="form-title">Service Request Form</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" id="fname" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" id="lname" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Company / Business Name</label>
+            <input type="text" id="company" placeholder="Smith Trucking LLC">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="phone" placeholder="(317) 555-0000">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Vehicle Type *</label>
+              <select id="vtype">
+                <option value="">Select type...</option>
+                <option>Semi Truck / Tractor</option>
+                <option>Box Truck</option>
+                <option>Flatbed Truck</option>
+                <option>Bus</option>
+                <option>Trailer</option>
+                <option>Other Commercial Vehicle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Service Needed *</label>
+              <select id="service">
+                <option value="">Select service...</option>
+                <option>Preventive Maintenance / Oil Change</option>
+                <option>DOT Inspection</option>
+                <option>Full Wreck Repair</option>
+                <option>Paint / Body Work</option>
+                <option>Sandblasting</option>
+                <option>Mobile / On-Site Service</option>
+                <option>Brakes & Suspension</option>
+                <option>Trailer Repair</option>
+                <option>Tires</option>
+                <option>Electrical / Lighting</option>
+                <option>Diagnostic (J-Pro)</option>
+                <option>Fleet Account Inquiry</option>
+                <option>On-Site Estimate Request</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Describe the Issue or Request</label>
+            <textarea id="notes" placeholder="Tell us what's going on with your truck or what service you need..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send Service Request →</button>
+          <div id="success-msg" class="success-msg">
+            ✅ Thanks! We received your request and will call you back shortly. For urgent needs, call us directly at (317) 227-0533.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">KDC Truck & Trailer Repair</div>
+      <div style="font-size:12px;margin-top:4px;">2702 N. Colorado Ave., Indianapolis, IN · (317) 227-0533</div>
+      <div style="font-size:12px;margin-top:2px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48232c2b272e2e212b2d08232c2b3a2d3829213a662b2725">[email&#160;protected]</a> · Est. 1995</div>
+    </div>
+    <div class="footer-links">
+      <span onclick="show('home')">Home</span>
+      <span onclick="show('services')">Services</span>
+      <span onclick="show('fleet')">Fleet Accounts</span>
+      <span onclick="show('about')">About Us</span>
+      <span onclick="show('contact')">Contact</span>
+    </div>
+    <div class="footer-copy">© 2026 KDC Truck & Trailer Repair. All rights reserved.</div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function show(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
+  }
+
+  function submitForm() {
+    const fname = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const vtype = document.getElementById('vtype').value;
+    const service = document.getElementById('service').value;
+    if (!fname || !phone || !vtype || !service) {
+      alert('Please fill in all re
