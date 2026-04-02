@@ -9,18 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1a2b3c;
-    --navy-light: #243447;
-    --orange: #e86c2f;
-    --orange-dark: #c45a20;
-    --orange-light: #fdf0e8;
-    --cream: #faf7f2;
-    --warm-gray: #6b6560;
-    --light-gray: #f0ece6;
-    --border: #ddd8d0;
+    --navy: #1a1a1a;
+    --navy-light: #2e2e2e;
+    --orange: #1a1a1a;
+    --orange-dark: #333333;
+    --orange-light: #f0f0f0;
+    --cream: #f7f7f7;
+    --warm-gray: #666666;
+    --light-gray: #eeeeee;
+    --border: #dedede;
     --white: #ffffff;
-    --text: #2c2420;
-    --text-light: #6b6560;
+    --text: #1a1a1a;
+    --text-light: #666666;
     --green: #2d7a4f;
   }
 
@@ -117,18 +117,18 @@
   .nav-links span:hover { color: white; }
 
   .nav-cta {
-    background: var(--orange);
-    color: white !important;
+    background: white;
+    color: #1a1a1a !important;
     padding: 8px 18px;
     border-radius: 6px;
     font-weight: 600 !important;
     transition: background 0.2s !important;
   }
 
-  .nav-cta:hover { background: var(--orange-dark) !important; color: white !important; }
+  .nav-cta:hover { background: #f0f0f0 !important; color: #1a1a1a !important; }
 
   .nav-phone {
-    color: var(--orange) !important;
+    color: #b5281c !important;
     font-weight: 600 !important;
     font-size: 15px !important;
     cursor: default !important;
@@ -173,9 +173,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(232,108,47,0.15);
-    border: 1px solid rgba(232,108,47,0.3);
-    color: #f4a86a;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.75);
     font-size: 13px;
     font-weight: 600;
     padding: 5px 14px;
@@ -200,7 +200,7 @@
     font-weight: 700;
   }
 
-  .hero h1 span { color: var(--orange); }
+  .hero h1 span { color: #b5281c; }
 
   .hero-desc {
     color: rgba(255,255,255,0.72);
@@ -217,8 +217,8 @@
   }
 
   .btn-primary {
-    background: var(--orange);
-    color: white;
+    background: var(--white);
+    color: #1a1a1a;
     padding: 13px 28px;
     border-radius: 8px;
     font-weight: 600;
@@ -231,7 +231,7 @@
     border: none;
   }
 
-  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-primary:hover { background: #f0f0f0; transform: translateY(-1px); }
 
   .btn-secondary {
     background: rgba(255,255,255,0.1);
@@ -337,16 +337,16 @@
   }
 
   .section-tag {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--orange);
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: var(--navy);
     margin-bottom: 1rem;
     font-weight: 700;
@@ -420,7 +420,7 @@
     align-items: start;
   }
 
-  .fleet-section .section-tag { color: #f4a86a; }
+  .fleet-section .section-tag { color: #e8948e; }
   .fleet-section .section-title { color: white; }
   .fleet-section .section-desc { color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
 
@@ -457,7 +457,7 @@
     border-radius: 12px;
   }
 
-  .pkg-badge.starter { background: rgba(232,108,47,0.2); color: #f4a86a; }
+  .pkg-badge.starter { background: rgba(181,40,28,0.15); color: #e8948e; }
   .pkg-badge.popular { background: var(--orange); color: white; }
   .pkg-badge.enterprise { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
 
@@ -677,8 +677,8 @@
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
-    border-color: var(--orange);
-    box-shadow: 0 0 0 3px rgba(232,108,47,0.12);
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(181,40,28,0.12);
   }
 
   .form-group textarea { resize: vertical; min-height: 90px; }
@@ -687,9 +687,9 @@
 
   .form-submit {
     width: 100%;
-    background: var(--orange);
-    color: white;
-    border: none;
+    background: white;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
     padding: 13px;
     border-radius: 8px;
     font-family: 'Source Sans 3', sans-serif;
@@ -700,41 +700,44 @@
     transition: background 0.2s;
   }
 
-  .form-submit:hover { background: var(--orange-dark); }
+  .form-submit:hover { background: #f0f0f0; }
 
   /* REVIEWS */
   .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.25rem;
   }
 
   .review-card {
-    background: var(--white);
-    border: 1px solid var(--border);
+    background: #2a2a2a;
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .stars { color: #f59e0b; font-size: 15px; margin-bottom: 0.75rem; letter-spacing: 1px; }
 
   .review-text {
-    font-size: 14px;
-    color: var(--text);
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
     line-height: 1.65;
     font-style: italic;
     margin-bottom: 1rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .reviewer {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
-    color: var(--navy);
+    color: white;
   }
 
   .reviewer-type {
-    font-size: 12px;
-    color: var(--text-light);
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
     margin-top: 2px;
   }
 
@@ -801,6 +804,7 @@
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
     .trust-bar-inner { gap: 1.5rem; }
+    #review-slides > div { min-width: 100% !important; padding: 0 !important; }
   }
 
   /* HAMBURGER BUTTON */
@@ -888,6 +892,25 @@
   }
 
   .success-msg.show { display: block; }
+
+  /* REVIEW CAROUSEL DOTS */
+  .rdot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .rdot.active {
+    background: #b5281c;
+    transform: scale(1.2);
+  }
+
+  /* REVIEW SLIDES */
+  .rslide { display: none; }
+  .rslide.active { display: block; }
 
   /* SECTION BG ALT */
   .bg-cream { background: var(--cream); }
@@ -1044,26 +1067,67 @@
   </div>
 
   <!-- COMMUNICATION PROMISE BANNER -->
-  <div style="background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2rem;">
+  <div class="section" style="background:var(--navy);padding:2.5rem 2rem;">
     <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;text-align:center;">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
         <div>
-          <div style="font-size:2rem;margin-bottom:0.5rem;">📲</div>
-          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Check-In Text</div>
-          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">We text you the moment your truck is checked in — no wondering if we got it.</div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#e8948e;margin-bottom:0.5rem;">Our Promise</div>
+          <h3 style="font-family:'Bitter',serif;font-size:1.5rem;font-weight:700;color:white;line-height:1.2;max-width:220px;">We keep you in the loop. Every step.</h3>
         </div>
-        <div style="border-left:1px solid var(--border);border-right:1px solid var(--border);padding:0 1.5rem;">
-          <div style="font-size:2rem;margin-bottom:0.5rem;">🔍</div>
-          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Diagnosis Update</div>
-          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">You get the full picture before we touch anything — issue, cost, timeline. Approve by reply.</div>
-        </div>
-        <div>
-          <div style="font-size:2rem;margin-bottom:0.5rem;">✅</div>
-          <div style="font-family:'Bitter',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px;">Ready for Pickup</div>
-          <div style="font-size:13px;color:var(--text-light);line-height:1.5;">A text when it's done — so your driver isn't calling to check in every hour.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;">
+          <div style="background:rgba(255,255,255,0.05);padding:1.25rem 1.5rem;">
+            <div style="font-size:1.4rem;margin-bottom:0.6rem;">📲</div>
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">1. Check-In Text</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;">We text you the moment your truck arrives. No wondering if we got it.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);padding:1.25rem 1.5rem;">
+            <div style="font-size:1.4rem;margin-bottom:0.6rem;">🔍</div>
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">2. Diagnosis Update</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;">Full picture before we touch anything — issue, cost, timeline. Approve by text.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);padding:1.25rem 1.5rem;">
+            <div style="font-size:1.4rem;margin-bottom:0.6rem;">✅</div>
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">3. Ready for Pickup</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;">A text when it's done — your driver knows exactly when to come.</div>
+          </div>
         </div>
       </div>
-      <div style="text-align:center;margin-top:1.5rem;font-size:13px;color:var(--text-light);">We keep you updated at every step. No news is not good news — we believe in communication.</div>
+    </div>
+  </div>
+
+    <!-- FLEET CTA BANNER -->
+  <div class="section" style="background:var(--navy);padding:3rem 2rem;">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+        <div>
+          <div class="section-tag" style="color:#e8948e;">For Fleet Managers</div>
+          <h2 class="section-title" style="color:white;margin-bottom:1rem;">Managing a Fleet? We Make It Simple.</h2>
+          <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:1.5rem;">At KDC, your fleet manager talks directly to the shop — a real person who knows your account. We offer net-30 billing, priority scheduling, on-site service at your yard, and text updates on every job. Simple, reliable, and built around keeping your trucks moving.</p>
+          <span onclick="show('fleet')" class="btn-primary" style="display:inline-flex;">See Fleet Account Options →</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Net-30 billing — one invoice, not a hundred</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Priority scheduling — your trucks don't wait in line</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Mobile service trucks come to your yard</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Text updates at every stage — check-in, diagnosis, ready</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
+            <div style="font-size:1.3rem;">✅</div>
+            <div style="font-size:14px;color:rgba(255,255,255,0.85);">On-site estimates — no tow required just for a quote</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1112,68 +1176,132 @@
   </div>
 
   <!-- REVIEWS -->
-  <div class="section bg-cream">
+  <div class="section" style="background:#1a1a1a;">
     <div class="section-inner">
-      <div class="section-tag">What Our Customers Say</div>
-      <h2 class="section-title">Trusted by Drivers & Fleets Across Indy</h2>
-      <p class="section-desc">We've built our reputation one repair at a time. Here's what our customers have to say.</p>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"KDC got my truck back on the road same day. They were upfront about the cost and didn't try to upsell me on anything I didn't need. That kind of honesty is rare."</p>
-          <div class="reviewer">Marcus T.</div>
-          <div class="reviewer-type">Owner-Operator, Indianapolis</div>
+      <div class="section-tag" style="color:rgba(255,255,255,0.5);">What Our Customers Say</div>
+      <h2 class="section-title" style="color:white;">Trusted by Drivers & Fleets Across Indy</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.6);">We've built our reputation one repair at a time. Here's what our customers have to say.</p>
+
+      <div id="review-box" style="position:relative;min-height:180px;">
+
+        <div class="rslide active" data-index="0">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Highly recommend this shop! In a world where great communication and customer service aren't always easy to find, they are absolutely here!! I have called on KDC multiple times in the last couple of months and always get a fast, honest answer to my issues. They have not only addressed my concerns but have also given me priceless advice to save even more in the future."</p>
+            <div class="reviewer">Hotshot Trailer Owner</div>
+            <div class="reviewer-type">Repeat Customer</div>
+          </div>
         </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"We run a fleet of 12 trucks and KDC handles all our maintenance. They're reliable, fast, and always communicate clearly. Couldn't ask for a better shop."</p>
-          <div class="reviewer">Fleet Manager, Regional Carrier</div>
-          <div class="reviewer-type">Indianapolis, IN</div>
+
+        <div class="rslide" data-index="1">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"They put on a SwapHog on my truck along with a very nice paint job at a reasonable price. Also took care of extra stuff without charge. They went above and beyond for me and I'm very happy with the work they put in. Thanks again!"</p>
+            <div class="reviewer">Truck Owner</div>
+            <div class="reviewer-type">Indianapolis, IN</div>
+          </div>
         </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">"Had a DOT inspection done here — quick, thorough, and priced fairly. They found a small brake issue and fixed it on the spot. These guys know their stuff."</p>
-          <div class="reviewer">Dave R.</div>
-          <div class="reviewer-type">Independent Trucker</div>
+
+        <div class="rslide" data-index="2">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"We sheared off all the lugs and lost a tire on the interstate outside of Indianapolis with 5 ton of lumber on the trailer. We reached out to KDC before 8:00 in the morning. They answered our call, referred us to Jason who took time to look at my pictures and try to help us any way he could. Excellent customer service to say the least!"</p>
+            <div class="reviewer">Lumber Hauler</div>
+            <div class="reviewer-type">Emergency Roadside Call</div>
+          </div>
+        </div>
+
+        <div class="rslide" data-index="3">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Mark and team at KDC helped our family out after the bearing and axle failed on our travel trailer. Their thorough but speedy service got us back on the road within 3 hours. I can't thank KDC enough!"</p>
+            <div class="reviewer">Travel Trailer Customer</div>
+            <div class="reviewer-type">Indianapolis, IN</div>
+          </div>
+        </div>
+
+        <div class="rslide" data-index="4">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"KDC has the best team! Bobby Perry comes right to our location and gets us back on the road in no time. He works in all kinds of weather smiling the whole time. I recommend calling KDC for all your truck and trailer needs!"</p>
+            <div class="reviewer">Fleet Customer</div>
+            <div class="reviewer-type">Mobile Service · Indianapolis</div>
+          </div>
+        </div>
+
+        <div class="rslide" data-index="5">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"KDC's Trailer Shop is by far the best in the area. Jason has always been easy to work with and gets our box trucks in and fixed so we can get them back on the road. I would recommend them to everyone who needs a reliable trailer repair shop."</p>
+            <div class="reviewer">Box Truck Fleet Owner</div>
+            <div class="reviewer-type">Repeat Customer</div>
+          </div>
+        </div>
+
+        <div class="rslide" data-index="6">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"We use KDC for DOTs and tractor & trailer repairs. They are very responsive, provide competitive estimates and are always excellent with communication. Bobby Perry is our regular service tech — he's awesome! Very thorough, attentive and prompt. It's nice to partner with a company that we can trust."</p>
+            <div class="reviewer">Fleet Manager</div>
+            <div class="reviewer-type">Commercial Fleet Account</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Prev / Next + Dots -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1.25rem;">
+        <button onclick="reviewNav(-1)" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;">&#8249;</button>
+        <div style="display:flex;gap:7px;align-items:center;">
+          <span class="rdot active" onclick="reviewGo(0)"></span>
+          <span class="rdot" onclick="reviewGo(1)"></span>
+          <span class="rdot" onclick="reviewGo(2)"></span>
+          <span class="rdot" onclick="reviewGo(3)"></span>
+          <span class="rdot" onclick="reviewGo(4)"></span>
+          <span class="rdot" onclick="reviewGo(5)"></span>
+          <span class="rdot" onclick="reviewGo(6)"></span>
+        </div>
+        <button onclick="reviewNav(1)" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;">&#8250;</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:3rem;padding-bottom:3rem;">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <div class="section-tag" style="text-align:center;">Professional Grade Materials & Equipment</div>
+        <h2 class="section-title" style="text-align:center;">Brands We Work With</h2>
+      </div>
+
+      <div style="margin-bottom:1.5rem;">
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted,#7a756e);margin-bottom:0.85rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Trailer Manufacturers We Service</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Wabash National</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Morgan</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Strick</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Doonan Specialized</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Hyundai Translead</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted,#7a756e);margin-bottom:0.85rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Paint & Body Products We Use</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Axalta</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">PPG</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">3M</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Evercoat</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Saint-Gobain</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">SEM</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Impact Performance Products</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">RDA</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:7px 16px;font-size:14px;font-weight:600;color:var(--navy);letter-spacing:0.02em;">Automotive Color & Supply</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FLEET CTA BANNER -->
-  <div class="section" style="background:var(--navy);padding:3rem 2rem;">
-    <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
-        <div>
-          <div class="section-tag" style="color:#f4a86a;">For Fleet Managers</div>
-          <h2 class="section-title" style="color:white;margin-bottom:1rem;">Managing a Fleet? We Make It Simple.</h2>
-          <p style="color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:1.5rem;">At KDC, your fleet manager talks directly to the shop — a real person who knows your account. We offer net-30 billing, priority scheduling, on-site service at your yard, and text updates on every job. Simple, reliable, and built around keeping your trucks moving.</p>
-          <span onclick="show('fleet')" class="btn-primary" style="display:inline-flex;">See Fleet Account Options →</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.85rem;">
-          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
-            <div style="font-size:1.3rem;">✅</div>
-            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Net-30 billing — one invoice, not a hundred</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
-            <div style="font-size:1.3rem;">✅</div>
-            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Priority scheduling — your trucks don't wait in line</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
-            <div style="font-size:1.3rem;">✅</div>
-            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Mobile service trucks come to your yard</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
-            <div style="font-size:1.3rem;">✅</div>
-            <div style="font-size:14px;color:rgba(255,255,255,0.85);">Text updates at every stage — check-in, diagnosis, ready</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem 1.1rem;">
-            <div style="font-size:1.3rem;">✅</div>
-            <div style="font-size:14px;color:rgba(255,255,255,0.85);">On-site estimates — no tow required just for a quote</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 </div>
@@ -1182,7 +1310,7 @@
 <div id="page-services" class="page">
   <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
     <div class="section-inner">
-      <div class="section-tag" style="color:#f4a86a;">What We Offer</div>
+      <div class="section-tag" style="color:#e8948e;">What We Offer</div>
       <h1 style="color:white;font-size:2.4rem;font-weight:700;">Our Services</h1>
       <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:520px;">Full-service repair and maintenance for semi trucks, commercial vehicles, buses, and trailers — all under one roof in Indianapolis.</p>
     </div>
@@ -1297,7 +1425,7 @@
             </div>
             <p>Scheduled PM services, oil changes, and DOT inspection discounts. Great for small owner-operators growing their fleet.</p>
           </div>
-          <div class="fleet-pkg" style="border-color:rgba(232,108,47,0.4);">
+          <div class="fleet-pkg" style="border-color:rgba(181,40,28,0.5);">
             <div class="fleet-pkg-header">
               <h4>Standard Fleet</h4>
               <span class="pkg-badge popular">Most Popular · 6–20 Trucks</span>
@@ -1341,7 +1469,7 @@
 <div id="page-about" class="page">
   <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
     <div class="section-inner">
-      <div class="section-tag" style="color:#f4a86a;">Our Story</div>
+      <div class="section-tag" style="color:#e8948e;">Our Story</div>
       <h1 style="color:white;font-size:2.4rem;font-weight:700;">About KDC Truck & Trailer Repair</h1>
       <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:580px;">A local Indianapolis shop built on honest work, fair prices, and a genuine care for our customers' livelihoods.</p>
     </div>
@@ -1417,7 +1545,7 @@
 <div id="page-contact" class="page">
   <div style="background:var(--navy);padding:3.5rem 2rem 3rem;">
     <div class="section-inner">
-      <div class="section-tag" style="color:#f4a86a;">Get in Touch</div>
+      <div class="section-tag" style="color:#e8948e;">Get in Touch</div>
       <h1 style="color:white;font-size:2.4rem;font-weight:700;">Request Service</h1>
       <p style="color:rgba(255,255,255,0.65);margin-top:0.75rem;font-size:1.05rem;max-width:520px;">Fill out the form below and we'll get back to you promptly. Prefer to call? Reach us directly at (317) 227-0533.</p>
     </div>
@@ -1432,7 +1560,7 @@
               <div class="info-card-icon">📞</div>
               <div>
                 <div class="info-card-label">Phone</div>
-                <div class="info-card-value"><span style="color:var(--orange);">(317) 227-0533</span></div>
+                <div class="info-card-value"><span style="color:#b5281c;">(317) 227-0533</span></div>
                 <div class="info-card-sub">Call or text anytime during business hours</div>
               </div>
             </div>
@@ -1440,7 +1568,7 @@
               <div class="info-card-icon">✉️</div>
               <div>
                 <div class="info-card-label">Email</div>
-                <div class="info-card-value" style="font-size:14px;">kdcoffice@kdcrepair.com</div>
+                <div class="info-card-value" style="font-size:14px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3b8b7b0bcb5b5bab0b693b8b7b0a1b6a3b2baa1fdb0bcbe">[email&#160;protected]</a></div>
                 <div class="info-card-sub">We respond to all emails during business hours</div>
               </div>
             </div>
@@ -1559,7 +1687,7 @@
     <div>
       <div class="footer-logo">KDC Truck & Trailer Repair</div>
       <div style="font-size:12px;margin-top:4px;">2702 N. Colorado Ave., Indianapolis, IN · (317) 227-0533</div>
-      <div style="font-size:12px;margin-top:2px;">kdcoffice@kdcrepair.com · Est. 1995</div>
+      <div style="font-size:12px;margin-top:2px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="016a65626e6767686264416a65627364716068732f626e6c">[email&#160;protected]</a> · Est. 1995</div>
     </div>
     <div class="footer-links">
       <span onclick="show('home')">Home</span>
@@ -1572,13 +1700,34 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function show(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + page).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return false;
   }
+
+  // Review carousel — simple show/hide, no transforms
+  var reviewIndex = 0;
+  var reviewTotal = 7;
+
+  function reviewGo(n) {
+    reviewIndex = (n + reviewTotal) % reviewTotal;
+    document.querySelectorAll('.rslide').forEach(function(s, i) {
+      s.classList.toggle('active', i === reviewIndex);
+    });
+    document.querySelectorAll('.rdot').forEach(function(d, i) {
+      d.classList.toggle('active', i === reviewIndex);
+    });
+  }
+
+  function reviewNav(dir) {
+    reviewGo(reviewIndex + dir);
+  }
+
+  // Auto-advance every 10 seconds
+  setInterval(function() { reviewNav(1); }, 10000);
 
   function toggleDrawer() {
     var drawer = document.getElementById('mobile-drawer');
@@ -1606,7 +1755,7 @@
     var btn = document.querySelector('.form-submit');
     msg.classList.add('show');
     btn.disabled = true;
-    btn.textContent = 'Request Sent \u2713';
+    btn.textContent = 'Request Sent ✓';
     btn.style.background = '#2d7a4f';
   }
 </script>
