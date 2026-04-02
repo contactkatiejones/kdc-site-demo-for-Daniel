@@ -805,6 +805,9 @@
     .form-row { grid-template-columns: 1fr; }
     .trust-bar-inner { gap: 1.5rem; }
     #review-slides > div { min-width: 100% !important; padding: 0 !important; }
+    .promise-grid { grid-template-columns: 1fr !important; }
+    .promise-steps { grid-template-columns: 1fr !important; }
+    .fleet-cta-grid { grid-template-columns: 1fr !important; }
   }
 
   /* HAMBURGER BUTTON */
@@ -1001,16 +1004,6 @@
     </div>
   </div>
 
-  <div class="trust-bar">
-    <div class="trust-bar-inner">
-      <div class="trust-item"><span class="trust-icon">🏆</span> In Business Since 1995</div>
-      <div class="trust-item"><span class="trust-icon">🎨</span> Two 60' Paint Booths</div>
-      <div class="trust-item"><span class="trust-icon">🚛</span> 3 Mobile Service Trucks</div>
-      <div class="trust-item"><span class="trust-icon">✅</span> DOT Certified Inspections</div>
-      <div class="trust-item"><span class="trust-icon">💥</span> Full Wreck Repairs</div>
-      <div class="trust-item"><span class="trust-icon">🤝</span> Fleet Accounts · Net-30 Billing</div>
-    </div>
-  </div>
 
   <!-- WHY KDC SECTION -->
   <div class="section">
@@ -1069,12 +1062,12 @@
   <!-- COMMUNICATION PROMISE BANNER -->
   <div class="section" style="background:var(--navy);padding:2.5rem 2rem;">
     <div class="section-inner">
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
+      <div class="promise-grid" style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
         <div>
           <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#e8948e;margin-bottom:0.5rem;">Our Promise</div>
           <h3 style="font-family:'Bitter',serif;font-size:1.5rem;font-weight:700;color:white;line-height:1.2;max-width:220px;">We keep you in the loop. Every step.</h3>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;">
+        <div class="promise-steps" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;">
           <div style="background:rgba(255,255,255,0.05);padding:1.25rem 1.5rem;">
             <div style="font-size:1.4rem;margin-bottom:0.6rem;">📲</div>
             <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">1. Check-In Text</div>
@@ -1098,7 +1091,7 @@
     <!-- FLEET CTA BANNER -->
   <div class="section" style="background:var(--navy);padding:3rem 2rem;">
     <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+      <div class="fleet-cta-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
         <div>
           <div class="section-tag" style="color:#e8948e;">For Fleet Managers</div>
           <h2 class="section-title" style="color:white;margin-bottom:1rem;">Managing a Fleet? We Make It Simple.</h2>
