@@ -761,12 +761,37 @@
   footer {
     background: var(--navy);
     color: rgba(255,255,255,0.65);
+    padding: 0;
+  }
+
+  .footer-tagline-bar {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .footer-tagline {
+    font-family: 'Bitter', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto 0.5rem;
+  }
+
+  .footer-tagline span { color: #b5281c; }
+
+  .footer-tagline-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.03em;
   }
 
   .footer-inner {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 1.75rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -776,9 +801,15 @@
 
   .footer-logo {
     font-family: 'Bitter', serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    color: white;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .footer-contact {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 3px;
   }
 
   .footer-links {
@@ -788,10 +819,10 @@
     flex-wrap: wrap;
   }
 
-  .footer-links span { color: rgba(255,255,255,0.55); transition: color 0.2s; cursor: pointer; }
+  .footer-links span { color: rgba(255,255,255,0.45); transition: color 0.2s; cursor: pointer; }
   .footer-links span:hover { color: white; }
 
-  .footer-copy { font-size: 12px; }
+  .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
 
   /* MOBILE */
   @media (max-width: 768px) {
@@ -966,7 +997,7 @@
   <div class="hero">
     <div class="hero-inner">
       <div>
-        <div class="hero-badge">Indianapolis's Independent Fleet Shop · Est. 1995</div>
+        <div class="hero-badge">Semi Truck · Commercial Truck · Bus · Trailer Repair · DOT Inspections · Fleet Maintenance</div>
         <h1>Indy's Most Complete<br><span>Truck & Trailer<br>Repair Shop.</span></h1>
         <p class="hero-desc">30 years serving Indianapolis fleets and owner-operators. Full wreck repairs, two 60' paint booths, sandblasting, mobile service, and DOT inspections — all under one roof. Independent, local, and built around your schedule.</p>
         <div class="hero-actions">
@@ -1634,7 +1665,7 @@
               <div class="info-card-icon">✉️</div>
               <div>
                 <div class="info-card-label">Email</div>
-                <div class="info-card-value" style="font-size:14px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3b8b7b0bcb5b5bab0b693b8b7b0a1b6a3b2baa1fdb0bcbe">[email&#160;protected]</a></div>
+                <div class="info-card-value" style="font-size:14px;">kdcoffice@kdcrepair.com</div>
                 <div class="info-card-sub">We respond to all emails during business hours</div>
               </div>
             </div>
@@ -1749,11 +1780,17 @@
 
 <!-- FOOTER -->
 <footer>
+  <!-- TAGLINE BAR -->
+  <div class="footer-tagline-bar">
+    <div class="footer-tagline"><span>Keeping You On The Road</span> Since 1995</div>
+    <div class="footer-tagline-sub">Truck, Trailer &amp; Bus Repair · DOT Inspections · Fleet Maintenance · Indianapolis, IN</div>
+  </div>
+
+  <!-- BOTTOM BAR -->
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">KDC Truck & Trailer Repair</div>
-      <div style="font-size:12px;margin-top:4px;">2702 N. Colorado Ave., Indianapolis, IN · (317) 227-0533</div>
-      <div style="font-size:12px;margin-top:2px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="016a65626e6767686264416a65627364716068732f626e6c">[email&#160;protected]</a> · Est. 1995</div>
+      <div class="footer-logo">KDC Truck &amp; Trailer Repair</div>
+      <div class="footer-contact">2702 N. Colorado Ave., Indianapolis, IN · (317) 227-0533 · kdcoffice@kdcrepair.com</div>
     </div>
     <div class="footer-links">
       <span onclick="show('home')">Home</span>
@@ -1762,11 +1799,11 @@
       <span onclick="show('about')">About Us</span>
       <span onclick="show('contact')">Contact</span>
     </div>
-    <div class="footer-copy">© 2026 KDC Truck & Trailer Repair. All rights reserved.</div>
+    <div class="footer-copy">&copy; 2026 KDC Truck &amp; Trailer Repair. All rights reserved.</div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function show(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + page).classList.add('active');
@@ -1774,7 +1811,20 @@
     return false;
   }
 
-  // Review carousel — simple show/hide, no transforms
+  function toggleDrawer() {
+    var drawer = document.getElementById('mobile-drawer');
+    var burger = document.getElementById('hamburger');
+    drawer.classList.toggle('open');
+    burger.classList.toggle('open');
+  }
+
+  function showMobile(page) {
+    show(page);
+    document.getElementById('mobile-drawer').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  // Review carousel
   var reviewIndex = 0;
   var reviewTotal = 7;
 
@@ -1792,21 +1842,7 @@
     reviewGo(reviewIndex + dir);
   }
 
-  // Auto-advance every 10 seconds
   setInterval(function() { reviewNav(1); }, 10000);
-
-  function toggleDrawer() {
-    var drawer = document.getElementById('mobile-drawer');
-    var burger = document.getElementById('hamburger');
-    drawer.classList.toggle('open');
-    burger.classList.toggle('open');
-  }
-
-  function showMobile(page) {
-    show(page);
-    document.getElementById('mobile-drawer').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-  }
 
   function submitForm() {
     var fname = document.getElementById('fname').value.trim();
