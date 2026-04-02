@@ -1353,7 +1353,7 @@
               <div class="info-card-icon">✉️</div>
               <div>
                 <div class="info-card-label">Email</div>
-                <div class="info-card-value" style="font-size:14px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f444b4c404949464c4a6f444b4c5d4a5f4e465d014c4042">[email&#160;protected]</a></div>
+                <div class="info-card-value" style="font-size:14px;">kdcoffice@kdcrepair.com</div>
                 <div class="info-card-sub">We respond to all emails during business hours</div>
               </div>
             </div>
@@ -1472,7 +1472,7 @@
     <div>
       <div class="footer-logo">KDC Truck & Trailer Repair</div>
       <div style="font-size:12px;margin-top:4px;">2702 N. Colorado Ave., Indianapolis, IN · (317) 227-0533</div>
-      <div style="font-size:12px;margin-top:2px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48232c2b272e2e212b2d08232c2b3a2d3829213a662b2725">[email&#160;protected]</a> · Est. 1995</div>
+      <div style="font-size:12px;margin-top:2px;">kdcoffice@kdcrepair.com · Est. 1995</div>
     </div>
     <div class="footer-links">
       <span onclick="show('home')">Home</span>
@@ -1485,7 +1485,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function show(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + page).classList.add('active');
@@ -1494,9 +1494,21 @@
   }
 
   function submitForm() {
-    const fname = document.getElementById('fname').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const vtype = document.getElementById('vtype').value;
-    const service = document.getElementById('service').value;
+    var fname = document.getElementById('fname').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var vtype = document.getElementById('vtype').value;
+    var service = document.getElementById('service').value;
     if (!fname || !phone || !vtype || !service) {
-      alert('Please fill in all re
+      alert('Please fill in all required fields (marked with *).');
+      return;
+    }
+    var msg = document.getElementById('success-msg');
+    var btn = document.querySelector('.form-submit');
+    msg.classList.add('show');
+    btn.disabled = true;
+    btn.textContent = 'Request Sent \u2713';
+    btn.style.background = '#2d7a4f';
+  }
+</script>
+</body>
+</html>
