@@ -803,6 +803,76 @@
     .trust-bar-inner { gap: 1.5rem; }
   }
 
+  /* HAMBURGER BUTTON */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .hamburger:hover { background: rgba(255,255,255,0.1); }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+  }
+
+  /* MOBILE DRAWER */
+  .mobile-drawer {
+    display: none;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    z-index: 99;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .mobile-drawer.open { display: block; }
+  .mobile-drawer ul {
+    list-style: none;
+    padding: 0.5rem 0;
+  }
+  .mobile-drawer ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .mobile-drawer ul li:last-child { border-bottom: none; }
+  .mobile-drawer ul li span {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .mobile-drawer ul li span:hover { background: rgba(255,255,255,0.07); color: white; }
+  .mobile-drawer ul li span.drawer-cta {
+    color: var(--orange);
+    font-weight: 600;
+  }
+  .mobile-drawer ul li span.drawer-phone {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+  }
+
   /* SUCCESS MESSAGE */
   .success-msg {
     display: none;
@@ -844,8 +914,25 @@
       <li><span class="nav-phone">📞 (317) 227-0533</span></li>
       <li><span onclick="show('contact')" class="nav-cta">Request Service</span></li>
     </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleDrawer()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer">
+  <ul>
+    <li><span onclick="showMobile('home')">Home</span></li>
+    <li><span onclick="showMobile('services')">Services</span></li>
+    <li><span onclick="showMobile('fleet')">Fleet Accounts</span></li>
+    <li><span onclick="showMobile('about')">About Us</span></li>
+    <li><span class="drawer-phone">📞 (317) 227-0533</span></li>
+    <li><span onclick="showMobile('contact')" class="drawer-cta">Request Service →</span></li>
+  </ul>
+</div>
 
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
@@ -1491,6 +1578,19 @@
     document.getElementById('page-' + page).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return false;
+  }
+
+  function toggleDrawer() {
+    var drawer = document.getElementById('mobile-drawer');
+    var burger = document.getElementById('hamburger');
+    drawer.classList.toggle('open');
+    burger.classList.toggle('open');
+  }
+
+  function showMobile(page) {
+    show(page);
+    document.getElementById('mobile-drawer').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
   }
 
   function submitForm() {
